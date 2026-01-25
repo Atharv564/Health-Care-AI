@@ -197,8 +197,4 @@ Python • Django • Data Analytics • AI Integration
 
 This project is for educational and demonstration purposes.
 
----
-
-If you understand this README completely, you’re already above average.
-If not — re-read it. That’s the level expected in real projects.
 
