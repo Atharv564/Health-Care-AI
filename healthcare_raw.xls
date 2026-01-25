@@ -1,0 +1,501 @@
+patient_id,age,gender,disease,hospital_name,admission_date,discharge_date,treatment_cost,outcome
+1,52,Female,Covid-19,City Hospital,2023-01-01,2023-01-05,147633,Recovered
+2,15,Female,Covid-19,Apollo,2023-01-02,2023-01-06,93397,Recovered
+3,72,Male,Cancer,Medicare Center,2023-01-03,2023-01-07,185225,Recovered
+4,61,Female,Asthma,City Hospital,2023-01-04,2023-01-08,38142,Recovered
+5,21,Male,Heart Disease,Medicare Center,2023-01-05,2023-01-09,31916,Recovered
+6,83,Male,Heart Disease,Apollo,2023-01-06,2023-01-10,69324,Recovered
+7,87,Male,Covid-19,Medicare Center,2023-01-07,2023-01-11,181037,Recovered
+8,75,Female,Covid-19,Medicare Center,2023-01-08,2023-01-12,130932,Referred
+9,75,Female,Diabetes,Medicare Center,2023-01-09,2023-01-13,140720,Recovered
+10,88,Male,Asthma,Medicare Center,2023-01-10,2023-01-14,171205,Recovered
+11,24,Male,Cancer,City Hospital,2023-01-11,2023-01-15,186749,Recovered
+12,3,Male,Heart Disease,City Hospital,2023-01-12,2023-01-16,101059,Recovered
+13,22,Male,Diabetes,Apollo,2023-01-13,2023-01-17,103317,Recovered
+14,53,Female,Diabetes,City Hospital,2023-01-14,2023-01-18,40046,Recovered
+15,2,Female,Heart Disease,City Hospital,2023-01-15,2023-01-19,183136,Recovered
+16,88,Male,Cancer,Apollo,2023-01-16,2023-01-20,106459,Recovered
+17,30,Male,Diabetes,City Hospital,2023-01-17,2023-01-21,50893,Recovered
+18,38,Female,Diabetes,City Hospital,2023-01-18,2023-01-22,106520,Recovered
+19,2,Female,Asthma,Apollo,2023-01-19,2023-01-23,130818,Recovered
+20,64,Male,Cancer,Apollo,2023-01-20,2023-01-24,66272,Recovered
+21,60,Male,Diabetes,Apollo,2023-01-21,2023-01-25,72649,Recovered
+22,21,Male,Cancer,Medicare Center,2023-01-22,2023-01-26,69674,Recovered
+23,33,Female,Heart Disease,Medicare Center,2023-01-23,2023-01-27,149832,Recovered
+24,76,Female,Covid-19,Apollo,2023-01-24,2023-01-28,157999,Recovered
+25,58,Female,Diabetes,Apollo,2023-01-25,2023-01-29,91475,Recovered
+26,22,Male,Asthma,Apollo,2023-01-26,2023-01-30,66367,Recovered
+27,89,Male,Heart Disease,Medicare Center,2023-01-27,2023-01-31,148660,Death
+28,49,Female,Cancer,Medicare Center,2023-01-28,2023-02-01,126750,Recovered
+29,59,Female,Heart Disease,City Hospital,2023-01-29,2023-02-02,123154,Death
+30,42,Male,Diabetes,City Hospital,2023-01-30,2023-02-03,188305,Recovered
+31,60,Female,Cancer,Apollo,2023-01-31,2023-02-04,49738,Recovered
+32,80,Female,Covid-19,Medicare Center,2023-02-01,2023-02-05,38397,Recovered
+33,15,Male,Heart Disease,Medicare Center,2023-02-02,2023-02-06,87189,Recovered
+34,62,Female,Diabetes,Medicare Center,2023-02-03,2023-02-07,81367,Recovered
+35,62,Male,Asthma,Apollo,2023-02-04,2023-02-08,125585,Recovered
+36,47,Male,Cancer,City Hospital,2023-02-05,2023-02-09,81619,Recovered
+37,62,Male,Heart Disease,Apollo,2023-02-06,2023-02-10,116453,Recovered
+38,51,Male,Heart Disease,City Hospital,2023-02-07,2023-02-11,24816,Recovered
+39,55,Male,Covid-19,City Hospital,2023-02-08,2023-02-12,178312,Recovered
+40,64,Male,Covid-19,Apollo,2023-02-09,2023-02-13,142348,Recovered
+41,3,Male,Asthma,City Hospital,2023-02-10,2023-02-14,84530,Recovered
+42,51,Female,Asthma,City Hospital,2023-02-11,2023-02-15,159571,Recovered
+43,7,Male,Diabetes,Medicare Center,2023-02-12,2023-02-16,113856,Recovered
+44,21,Male,Diabetes,City Hospital,2023-02-13,2023-02-17,76635,Recovered
+45,73,Female,Asthma,Apollo,2023-02-14,2023-02-18,112803,Referred
+46,39,Female,Asthma,Apollo,2023-02-15,2023-02-19,40946,Death
+47,18,Female,Cancer,City Hospital,2023-02-16,2023-02-20,60204,Recovered
+48,4,Male,Covid-19,Medicare Center,2023-02-17,2023-02-21,187958,Recovered
+49,89,Female,Diabetes,Medicare Center,2023-02-18,2023-02-22,20563,Recovered
+50,60,Male,Covid-19,City Hospital,2023-02-19,2023-02-23,97324,Recovered
+51,14,Male,Covid-19,City Hospital,2023-02-20,2023-02-24,14847,Recovered
+52,9,Male,Asthma,Apollo,2023-02-21,2023-02-25,31155,Recovered
+53,53,Male,Cancer,City Hospital,2023-02-22,2023-02-26,84671,Recovered
+54,2,Female,Heart Disease,Medicare Center,2023-02-23,2023-02-27,121891,Referred
+55,84,Female,Cancer,City Hospital,2023-02-24,2023-02-28,88310,Recovered
+56,60,Male,Cancer,Apollo,2023-02-25,2023-03-01,154381,Recovered
+57,71,Male,Covid-19,Apollo,2023-02-26,2023-03-02,136691,Recovered
+58,44,Male,Cancer,Apollo,2023-02-27,2023-03-03,186180,Referred
+59,8,Female,Diabetes,Apollo,2023-02-28,2023-03-04,39707,Recovered
+60,47,Male,Covid-19,Apollo,2023-03-01,2023-03-05,156409,Recovered
+61,35,Male,Diabetes,City Hospital,2023-03-02,2023-03-06,86537,Recovered
+62,78,Female,Heart Disease,City Hospital,2023-03-03,2023-03-07,183686,Recovered
+63,81,Female,Covid-19,City Hospital,2023-03-04,2023-03-08,96155,Recovered
+64,36,Male,Heart Disease,City Hospital,2023-03-05,2023-03-09,5281,Recovered
+65,50,Female,Covid-19,Apollo,2023-03-06,2023-03-10,163492,Recovered
+66,4,Female,Asthma,Medicare Center,2023-03-07,2023-03-11,175102,Recovered
+67,2,Male,Cancer,City Hospital,2023-03-08,2023-03-12,137130,Recovered
+68,6,Female,Asthma,Medicare Center,2023-03-09,2023-03-13,81260,Recovered
+69,54,Male,Heart Disease,City Hospital,2023-03-10,2023-03-14,164476,Recovered
+70,4,Female,Cancer,City Hospital,2023-03-11,2023-03-15,165928,Recovered
+71,54,Male,Covid-19,Medicare Center,2023-03-12,2023-03-16,145272,Recovered
+72,63,Male,Cancer,Apollo,2023-03-13,2023-03-17,69178,Recovered
+73,18,Male,Diabetes,City Hospital,2023-03-14,2023-03-18,38997,Death
+74,44,Female,Cancer,City Hospital,2023-03-15,2023-03-19,161683,Recovered
+75,34,Male,Diabetes,City Hospital,2023-03-16,2023-03-20,124273,Recovered
+76,74,Female,Cancer,Medicare Center,2023-03-17,2023-03-21,177307,Recovered
+77,62,Male,Diabetes,Apollo,2023-03-18,2023-03-22,171129,Recovered
+78,14,Male,Heart Disease,Medicare Center,2023-03-19,2023-03-23,137311,Recovered
+79,48,Female,Asthma,Medicare Center,2023-03-20,2023-03-24,131945,Recovered
+80,15,Male,Covid-19,Apollo,2023-03-21,2023-03-25,50272,Recovered
+81,72,Male,Cancer,Medicare Center,2023-03-22,2023-03-26,94393,Recovered
+82,78,Female,Asthma,Apollo,2023-03-23,2023-03-27,66212,Recovered
+83,87,Male,Covid-19,City Hospital,2023-03-24,2023-03-28,151470,Recovered
+84,62,Male,Covid-19,Apollo,2023-03-25,2023-03-29,125030,Recovered
+85,40,Male,Diabetes,City Hospital,2023-03-26,2023-03-30,61503,Recovered
+86,85,Male,Heart Disease,Medicare Center,2023-03-27,2023-03-31,142710,Recovered
+87,80,Female,Heart Disease,Medicare Center,2023-03-28,2023-04-01,11570,Recovered
+88,82,Female,Asthma,City Hospital,2023-03-29,2023-04-02,73785,Death
+89,53,Male,Heart Disease,Medicare Center,2023-03-30,2023-04-03,14110,Recovered
+90,24,Female,Cancer,Apollo,2023-03-31,2023-04-04,84141,Recovered
+91,26,Male,Heart Disease,City Hospital,2023-04-01,2023-04-05,17115,Recovered
+92,89,Female,Asthma,Medicare Center,2023-04-02,2023-04-06,44062,Recovered
+93,60,Male,Heart Disease,City Hospital,2023-04-03,2023-04-07,27911,Recovered
+94,41,Male,Cancer,Apollo,2023-04-04,2023-04-08,109061,Recovered
+95,29,Male,Diabetes,Apollo,2023-04-05,2023-04-09,37556,Recovered
+96,15,Male,Asthma,Medicare Center,2023-04-06,2023-04-10,133335,Recovered
+97,45,Male,Diabetes,Apollo,2023-04-07,2023-04-11,6969,Recovered
+98,65,Male,Diabetes,City Hospital,2023-04-08,2023-04-12,48753,Recovered
+99,89,Female,Diabetes,Apollo,2023-04-09,2023-04-13,140542,Recovered
+100,71,Male,Covid-19,City Hospital,2023-04-10,2023-04-14,126863,Death
+101,9,Female,Covid-19,City Hospital,2023-04-11,2023-04-15,15225,Recovered
+102,88,Male,Diabetes,Apollo,2023-04-12,2023-04-16,128008,Recovered
+103,1,Female,Asthma,Medicare Center,2023-04-13,2023-04-17,159268,Death
+104,8,Female,Cancer,Apollo,2023-04-14,2023-04-18,110823,Recovered
+105,88,Female,Cancer,City Hospital,2023-04-15,2023-04-19,18669,Recovered
+106,63,Male,Heart Disease,City Hospital,2023-04-16,2023-04-20,173452,Recovered
+107,11,Male,Asthma,Apollo,2023-04-17,2023-04-21,129398,Recovered
+108,81,Female,Covid-19,Medicare Center,2023-04-18,2023-04-22,115677,Recovered
+109,8,Male,Diabetes,Medicare Center,2023-04-19,2023-04-23,53320,Recovered
+110,35,Female,Heart Disease,City Hospital,2023-04-20,2023-04-24,183486,Recovered
+111,35,Male,Cancer,City Hospital,2023-04-21,2023-04-25,151649,Referred
+112,33,Female,Covid-19,Medicare Center,2023-04-22,2023-04-26,130354,Recovered
+113,5,Female,Covid-19,Apollo,2023-04-23,2023-04-27,93009,Recovered
+114,41,Male,Diabetes,City Hospital,2023-04-24,2023-04-28,191481,Recovered
+115,28,Female,Cancer,City Hospital,2023-04-25,2023-04-29,33625,Recovered
+116,7,Male,Asthma,Medicare Center,2023-04-26,2023-04-30,29089,Recovered
+117,73,Female,Covid-19,Apollo,2023-04-27,2023-05-01,41487,Referred
+118,72,Female,Diabetes,Medicare Center,2023-04-28,2023-05-02,115448,Recovered
+119,12,Male,Asthma,Apollo,2023-04-29,2023-05-03,55138,Recovered
+120,34,Male,Cancer,Apollo,2023-04-30,2023-05-04,178895,Recovered
+121,33,Male,Covid-19,Apollo,2023-05-01,2023-05-05,173280,Referred
+122,48,Female,Asthma,City Hospital,2023-05-02,2023-05-06,59061,Recovered
+123,23,Male,Asthma,Medicare Center,2023-05-03,2023-05-07,166731,Recovered
+124,62,Female,Asthma,Medicare Center,2023-05-04,2023-05-08,106376,Recovered
+125,88,Female,Covid-19,Apollo,2023-05-05,2023-05-09,167962,Referred
+126,37,Male,Covid-19,City Hospital,2023-05-06,2023-05-10,84134,Recovered
+127,44,Male,Heart Disease,City Hospital,2023-05-07,2023-05-11,52055,Referred
+128,86,Female,Cancer,Medicare Center,2023-05-08,2023-05-12,24508,Recovered
+129,35,Female,Diabetes,City Hospital,2023-05-09,2023-05-13,178359,Recovered
+130,65,Male,Asthma,City Hospital,2023-05-10,2023-05-14,163056,Recovered
+131,47,Male,Heart Disease,Apollo,2023-05-11,2023-05-15,115169,Recovered
+132,78,Male,Diabetes,City Hospital,2023-05-12,2023-05-16,13125,Recovered
+133,3,Male,Heart Disease,Apollo,2023-05-13,2023-05-17,41059,Recovered
+134,1,Male,Covid-19,Medicare Center,2023-05-14,2023-05-18,108409,Recovered
+135,5,Female,Asthma,City Hospital,2023-05-15,2023-05-19,153159,Recovered
+136,14,Female,Diabetes,Medicare Center,2023-05-16,2023-05-20,10704,Recovered
+137,27,Female,Diabetes,Medicare Center,2023-05-17,2023-05-21,196648,Death
+138,9,Female,Diabetes,City Hospital,2023-05-18,2023-05-22,116279,Referred
+139,79,Male,Diabetes,City Hospital,2023-05-19,2023-05-23,163280,Recovered
+140,15,Male,Diabetes,Medicare Center,2023-05-20,2023-05-24,123516,Recovered
+141,42,Male,Heart Disease,City Hospital,2023-05-21,2023-05-25,175954,Recovered
+142,77,Female,Asthma,Apollo,2023-05-22,2023-05-26,161995,Recovered
+143,51,Female,Covid-19,Apollo,2023-05-23,2023-05-27,119044,Recovered
+144,63,Male,Covid-19,City Hospital,2023-05-24,2023-05-28,34165,Recovered
+145,52,Male,Covid-19,Medicare Center,2023-05-25,2023-05-29,72203,Recovered
+146,4,Female,Covid-19,City Hospital,2023-05-26,2023-05-30,9114,Recovered
+147,23,Female,Heart Disease,City Hospital,2023-05-27,2023-05-31,41321,Recovered
+148,15,Male,Cancer,Medicare Center,2023-05-28,2023-06-01,78297,Recovered
+149,43,Male,Asthma,Medicare Center,2023-05-29,2023-06-02,101652,Recovered
+150,29,Female,Diabetes,Apollo,2023-05-30,2023-06-03,104304,Recovered
+151,36,Male,Cancer,Medicare Center,2023-05-31,2023-06-04,161498,Recovered
+152,13,Male,Covid-19,Apollo,2023-06-01,2023-06-05,22772,Recovered
+153,32,Male,Cancer,Medicare Center,2023-06-02,2023-06-06,108754,Recovered
+154,71,Female,Asthma,City Hospital,2023-06-03,2023-06-07,8712,Referred
+155,59,Female,Diabetes,Apollo,2023-06-04,2023-06-08,137439,Recovered
+156,86,Female,Diabetes,Apollo,2023-06-05,2023-06-09,120142,Recovered
+157,28,Female,Asthma,Apollo,2023-06-06,2023-06-10,96736,Recovered
+158,66,Female,Asthma,City Hospital,2023-06-07,2023-06-11,56924,Recovered
+159,42,Female,Covid-19,City Hospital,2023-06-08,2023-06-12,8726,Recovered
+160,45,Female,Diabetes,City Hospital,2023-06-09,2023-06-13,94152,Recovered
+161,62,Male,Cancer,City Hospital,2023-06-10,2023-06-14,32723,Recovered
+162,57,Male,Heart Disease,City Hospital,2023-06-11,2023-06-15,131969,Death
+163,6,Male,Heart Disease,Apollo,2023-06-12,2023-06-16,105494,Recovered
+164,28,Male,Asthma,City Hospital,2023-06-13,2023-06-17,145180,Recovered
+165,28,Male,Covid-19,Apollo,2023-06-14,2023-06-18,40643,Recovered
+166,44,Male,Heart Disease,City Hospital,2023-06-15,2023-06-19,167396,Recovered
+167,84,Male,Diabetes,Medicare Center,2023-06-16,2023-06-20,108896,Recovered
+168,30,Female,Asthma,Apollo,2023-06-17,2023-06-21,144999,Recovered
+169,62,Female,Cancer,Medicare Center,2023-06-18,2023-06-22,98680,Recovered
+170,75,Male,Asthma,Apollo,2023-06-19,2023-06-23,101546,Recovered
+171,89,Male,Cancer,Medicare Center,2023-06-20,2023-06-24,158515,Recovered
+172,62,Female,Asthma,City Hospital,2023-06-21,2023-06-25,84973,Recovered
+173,1,Male,Asthma,City Hospital,2023-06-22,2023-06-26,68449,Recovered
+174,27,Male,Asthma,City Hospital,2023-06-23,2023-06-27,114834,Recovered
+175,62,Female,Cancer,Apollo,2023-06-24,2023-06-28,196305,Recovered
+176,77,Male,Cancer,Medicare Center,2023-06-25,2023-06-29,30537,Recovered
+177,3,Female,Asthma,City Hospital,2023-06-26,2023-06-30,82576,Recovered
+178,70,Male,Heart Disease,Medicare Center,2023-06-27,2023-07-01,112522,Recovered
+179,72,Female,Covid-19,Medicare Center,2023-06-28,2023-07-02,27612,Death
+180,27,Female,Covid-19,City Hospital,2023-06-29,2023-07-03,11471,Recovered
+181,9,Female,Covid-19,City Hospital,2023-06-30,2023-07-04,171703,Recovered
+182,62,Male,Cancer,Medicare Center,2023-07-01,2023-07-05,36348,Recovered
+183,37,Female,Cancer,City Hospital,2023-07-02,2023-07-06,6177,Recovered
+184,51,Male,Heart Disease,City Hospital,2023-07-03,2023-07-07,140832,Referred
+185,44,Male,Covid-19,City Hospital,2023-07-04,2023-07-08,37779,Death
+186,24,Male,Covid-19,Apollo,2023-07-05,2023-07-09,26636,Recovered
+187,79,Male,Asthma,Medicare Center,2023-07-06,2023-07-10,86889,Recovered
+188,59,Female,Cancer,Medicare Center,2023-07-07,2023-07-11,58551,Recovered
+189,32,Female,Covid-19,Apollo,2023-07-08,2023-07-12,147628,Referred
+190,88,Male,Heart Disease,Medicare Center,2023-07-09,2023-07-13,163670,Recovered
+191,52,Male,Heart Disease,City Hospital,2023-07-10,2023-07-14,147635,Recovered
+192,62,Female,Covid-19,Medicare Center,2023-07-11,2023-07-15,51819,Recovered
+193,58,Male,Cancer,City Hospital,2023-07-12,2023-07-16,78770,Recovered
+194,52,Female,Heart Disease,Apollo,2023-07-13,2023-07-17,163038,Recovered
+195,12,Male,Asthma,City Hospital,2023-07-14,2023-07-18,195961,Recovered
+196,39,Male,Heart Disease,Medicare Center,2023-07-15,2023-07-19,163059,Recovered
+197,2,Female,Diabetes,Medicare Center,2023-07-16,2023-07-20,83714,Recovered
+198,3,Male,Diabetes,Medicare Center,2023-07-17,2023-07-21,194420,Recovered
+199,56,Female,Cancer,Apollo,2023-07-18,2023-07-22,29596,Recovered
+200,81,Male,Covid-19,Apollo,2023-07-19,2023-07-23,169246,Recovered
+201,59,Male,Cancer,Medicare Center,2023-07-20,2023-07-24,69106,Recovered
+202,2,Male,Cancer,City Hospital,2023-07-21,2023-07-25,64182,Recovered
+203,2,Female,Cancer,Apollo,2023-07-22,2023-07-26,92163,Recovered
+204,54,Male,Cancer,Medicare Center,2023-07-23,2023-07-27,44310,Recovered
+205,87,Male,Asthma,Medicare Center,2023-07-24,2023-07-28,61088,Recovered
+206,1,Male,Asthma,Apollo,2023-07-25,2023-07-29,133803,Recovered
+207,19,Male,Heart Disease,Apollo,2023-07-26,2023-07-30,144978,Recovered
+208,2,Female,Diabetes,Apollo,2023-07-27,2023-07-31,41914,Recovered
+209,53,Female,Cancer,City Hospital,2023-07-28,2023-08-01,115350,Recovered
+210,44,Male,Heart Disease,City Hospital,2023-07-29,2023-08-02,50379,Recovered
+211,32,Female,Diabetes,Medicare Center,2023-07-30,2023-08-03,173722,Recovered
+212,70,Male,Covid-19,Apollo,2023-07-31,2023-08-04,182953,Recovered
+213,32,Male,Asthma,City Hospital,2023-08-01,2023-08-05,51413,Recovered
+214,68,Male,Diabetes,Apollo,2023-08-02,2023-08-06,142084,Recovered
+215,55,Female,Covid-19,Medicare Center,2023-08-03,2023-08-07,186187,Recovered
+216,75,Female,Diabetes,City Hospital,2023-08-04,2023-08-08,12151,Recovered
+217,56,Female,Asthma,City Hospital,2023-08-05,2023-08-09,62716,Recovered
+218,17,Female,Asthma,City Hospital,2023-08-06,2023-08-10,98747,Recovered
+219,38,Female,Heart Disease,Medicare Center,2023-08-07,2023-08-11,172450,Recovered
+220,24,Female,Cancer,Apollo,2023-08-08,2023-08-12,178724,Recovered
+221,69,Female,Diabetes,City Hospital,2023-08-09,2023-08-13,149539,Recovered
+222,70,Female,Diabetes,Medicare Center,2023-08-10,2023-08-14,167082,Recovered
+223,86,Female,Covid-19,Apollo,2023-08-11,2023-08-15,126999,Recovered
+224,11,Male,Asthma,Medicare Center,2023-08-12,2023-08-16,119793,Recovered
+225,16,Female,Diabetes,Apollo,2023-08-13,2023-08-17,190763,Recovered
+226,73,Female,Asthma,Medicare Center,2023-08-14,2023-08-18,113177,Recovered
+227,59,Female,Diabetes,Apollo,2023-08-15,2023-08-19,17289,Death
+228,70,Female,Heart Disease,City Hospital,2023-08-16,2023-08-20,181048,Referred
+229,80,Female,Cancer,Apollo,2023-08-17,2023-08-21,179668,Recovered
+230,3,Female,Diabetes,Medicare Center,2023-08-18,2023-08-22,159243,Recovered
+231,20,Female,Asthma,Medicare Center,2023-08-19,2023-08-23,91365,Recovered
+232,59,Female,Heart Disease,Apollo,2023-08-20,2023-08-24,119014,Recovered
+233,36,Female,Diabetes,City Hospital,2023-08-21,2023-08-25,180211,Recovered
+234,19,Female,Covid-19,City Hospital,2023-08-22,2023-08-26,184785,Recovered
+235,67,Female,Cancer,Apollo,2023-08-23,2023-08-27,165806,Recovered
+236,19,Male,Diabetes,Apollo,2023-08-24,2023-08-28,77588,Recovered
+237,20,Male,Heart Disease,Medicare Center,2023-08-25,2023-08-29,68646,Recovered
+238,71,Female,Covid-19,City Hospital,2023-08-26,2023-08-30,8654,Recovered
+239,52,Female,Heart Disease,Apollo,2023-08-27,2023-08-31,23743,Recovered
+240,33,Male,Heart Disease,City Hospital,2023-08-28,2023-09-01,53368,Recovered
+241,40,Female,Covid-19,Apollo,2023-08-29,2023-09-02,142513,Recovered
+242,39,Male,Heart Disease,Apollo,2023-08-30,2023-09-03,124735,Recovered
+243,82,Male,Covid-19,City Hospital,2023-08-31,2023-09-04,160683,Recovered
+244,1,Male,Diabetes,Apollo,2023-09-01,2023-09-05,124891,Recovered
+245,11,Male,Covid-19,Apollo,2023-09-02,2023-09-06,112971,Recovered
+246,57,Male,Covid-19,Medicare Center,2023-09-03,2023-09-07,17149,Recovered
+247,89,Female,Cancer,Apollo,2023-09-04,2023-09-08,105102,Recovered
+248,50,Male,Covid-19,Apollo,2023-09-05,2023-09-09,64189,Referred
+249,23,Female,Covid-19,Apollo,2023-09-06,2023-09-10,157747,Recovered
+250,31,Female,Diabetes,Medicare Center,2023-09-07,2023-09-11,76031,Recovered
+251,42,Male,Cancer,City Hospital,2023-09-08,2023-09-12,47668,Referred
+252,7,Male,Asthma,Medicare Center,2023-09-09,2023-09-13,149745,Recovered
+253,16,Female,Diabetes,Medicare Center,2023-09-10,2023-09-14,93204,Recovered
+254,60,Male,Diabetes,City Hospital,2023-09-11,2023-09-15,159741,Recovered
+255,2,Male,Asthma,Medicare Center,2023-09-12,2023-09-16,170140,Recovered
+256,1,Female,Covid-19,City Hospital,2023-09-13,2023-09-17,145507,Recovered
+257,48,Female,Heart Disease,Medicare Center,2023-09-14,2023-09-18,188321,Recovered
+258,12,Male,Cancer,City Hospital,2023-09-15,2023-09-19,42384,Recovered
+259,69,Female,Heart Disease,Apollo,2023-09-16,2023-09-20,86929,Recovered
+260,37,Male,Asthma,Medicare Center,2023-09-17,2023-09-21,132959,Recovered
+261,32,Male,Diabetes,Medicare Center,2023-09-18,2023-09-22,81153,Recovered
+262,9,Male,Diabetes,Medicare Center,2023-09-19,2023-09-23,80388,Recovered
+263,19,Female,Cancer,Medicare Center,2023-09-20,2023-09-24,36401,Recovered
+264,48,Female,Diabetes,Apollo,2023-09-21,2023-09-25,124503,Recovered
+265,80,Female,Diabetes,Medicare Center,2023-09-22,2023-09-26,132834,Recovered
+266,3,Female,Cancer,Apollo,2023-09-23,2023-09-27,39084,Recovered
+267,20,Female,Cancer,Apollo,2023-09-24,2023-09-28,115641,Recovered
+268,24,Male,Asthma,Apollo,2023-09-25,2023-09-29,110111,Recovered
+269,54,Male,Diabetes,Apollo,2023-09-26,2023-09-30,191898,Death
+270,33,Male,Diabetes,City Hospital,2023-09-27,2023-10-01,172523,Recovered
+271,24,Male,Asthma,City Hospital,2023-09-28,2023-10-02,143299,Recovered
+272,75,Female,Covid-19,Medicare Center,2023-09-29,2023-10-03,167982,Recovered
+273,72,Male,Covid-19,City Hospital,2023-09-30,2023-10-04,41041,Recovered
+274,36,Female,Covid-19,City Hospital,2023-10-01,2023-10-05,93920,Recovered
+275,38,Male,Asthma,Medicare Center,2023-10-02,2023-10-06,70681,Referred
+276,84,Female,Diabetes,Medicare Center,2023-10-03,2023-10-07,86571,Recovered
+277,89,Female,Asthma,Medicare Center,2023-10-04,2023-10-08,132556,Recovered
+278,25,Male,Asthma,City Hospital,2023-10-05,2023-10-09,31160,Recovered
+279,18,Male,Covid-19,City Hospital,2023-10-06,2023-10-10,22633,Recovered
+280,82,Male,Heart Disease,Medicare Center,2023-10-07,2023-10-11,22014,Recovered
+281,66,Male,Diabetes,Apollo,2023-10-08,2023-10-12,85532,Recovered
+282,54,Female,Covid-19,Medicare Center,2023-10-09,2023-10-13,54104,Recovered
+283,35,Male,Heart Disease,Apollo,2023-10-10,2023-10-14,177693,Recovered
+284,80,Male,Heart Disease,Apollo,2023-10-11,2023-10-15,82231,Recovered
+285,61,Female,Cancer,Medicare Center,2023-10-12,2023-10-16,73388,Referred
+286,41,Male,Diabetes,Medicare Center,2023-10-13,2023-10-17,21014,Recovered
+287,33,Male,Heart Disease,Medicare Center,2023-10-14,2023-10-18,97578,Recovered
+288,68,Male,Covid-19,City Hospital,2023-10-15,2023-10-19,169827,Recovered
+289,33,Male,Cancer,Apollo,2023-10-16,2023-10-20,45390,Recovered
+290,14,Male,Diabetes,City Hospital,2023-10-17,2023-10-21,28711,Referred
+291,21,Female,Asthma,City Hospital,2023-10-18,2023-10-22,96658,Recovered
+292,48,Male,Covid-19,Medicare Center,2023-10-19,2023-10-23,62993,Recovered
+293,20,Male,Heart Disease,City Hospital,2023-10-20,2023-10-24,163285,Death
+294,8,Male,Heart Disease,Medicare Center,2023-10-21,2023-10-25,193856,Recovered
+295,7,Male,Covid-19,Apollo,2023-10-22,2023-10-26,12421,Referred
+296,67,Male,Heart Disease,Medicare Center,2023-10-23,2023-10-27,22727,Recovered
+297,17,Female,Cancer,City Hospital,2023-10-24,2023-10-28,117418,Recovered
+298,33,Male,Diabetes,City Hospital,2023-10-25,2023-10-29,9358,Recovered
+299,48,Female,Cancer,Medicare Center,2023-10-26,2023-10-30,70108,Recovered
+300,76,Female,Heart Disease,Medicare Center,2023-10-27,2023-10-31,99018,Death
+301,59,Male,Asthma,City Hospital,2023-10-28,2023-11-01,129457,Recovered
+302,86,Male,Diabetes,Apollo,2023-10-29,2023-11-02,168189,Recovered
+303,22,Male,Diabetes,Apollo,2023-10-30,2023-11-03,36910,Recovered
+304,30,Male,Covid-19,Medicare Center,2023-10-31,2023-11-04,131888,Recovered
+305,38,Female,Covid-19,Apollo,2023-11-01,2023-11-05,60754,Recovered
+306,51,Male,Asthma,City Hospital,2023-11-02,2023-11-06,198510,Death
+307,54,Male,Diabetes,Medicare Center,2023-11-03,2023-11-07,114847,Recovered
+308,8,Male,Asthma,City Hospital,2023-11-04,2023-11-08,165443,Recovered
+309,27,Male,Covid-19,City Hospital,2023-11-05,2023-11-09,187573,Recovered
+310,27,Male,Covid-19,Apollo,2023-11-06,2023-11-10,197018,Recovered
+311,21,Male,Diabetes,Medicare Center,2023-11-07,2023-11-11,43467,Recovered
+312,30,Female,Cancer,Medicare Center,2023-11-08,2023-11-12,153697,Recovered
+313,28,Female,Heart Disease,Apollo,2023-11-09,2023-11-13,38893,Referred
+314,64,Male,Covid-19,City Hospital,2023-11-10,2023-11-14,81329,Recovered
+315,69,Male,Covid-19,City Hospital,2023-11-11,2023-11-15,36007,Recovered
+316,61,Male,Cancer,City Hospital,2023-11-12,2023-11-16,175604,Recovered
+317,48,Female,Cancer,City Hospital,2023-11-13,2023-11-17,59253,Referred
+318,19,Male,Asthma,Medicare Center,2023-11-14,2023-11-18,17323,Recovered
+319,4,Female,Asthma,Medicare Center,2023-11-15,2023-11-19,116335,Recovered
+320,35,Male,Heart Disease,Apollo,2023-11-16,2023-11-20,117356,Recovered
+321,64,Male,Heart Disease,Apollo,2023-11-17,2023-11-21,115944,Recovered
+322,49,Male,Diabetes,Medicare Center,2023-11-18,2023-11-22,150282,Recovered
+323,17,Male,Asthma,Medicare Center,2023-11-19,2023-11-23,21456,Recovered
+324,44,Female,Covid-19,City Hospital,2023-11-20,2023-11-24,36367,Recovered
+325,30,Female,Asthma,City Hospital,2023-11-21,2023-11-25,59624,Recovered
+326,46,Male,Covid-19,Apollo,2023-11-22,2023-11-26,146178,Referred
+327,6,Male,Cancer,Medicare Center,2023-11-23,2023-11-27,73008,Recovered
+328,37,Female,Asthma,Apollo,2023-11-24,2023-11-28,130926,Recovered
+329,24,Female,Cancer,Medicare Center,2023-11-25,2023-11-29,120395,Recovered
+330,46,Female,Heart Disease,City Hospital,2023-11-26,2023-11-30,121492,Recovered
+331,53,Female,Heart Disease,Apollo,2023-11-27,2023-12-01,77240,Recovered
+332,60,Male,Diabetes,Apollo,2023-11-28,2023-12-02,69315,Recovered
+333,63,Female,Asthma,Medicare Center,2023-11-29,2023-12-03,15756,Recovered
+334,85,Male,Cancer,City Hospital,2023-11-30,2023-12-04,41378,Recovered
+335,32,Female,Covid-19,Apollo,2023-12-01,2023-12-05,140327,Recovered
+336,87,Female,Heart Disease,City Hospital,2023-12-02,2023-12-06,150556,Recovered
+337,33,Female,Heart Disease,Apollo,2023-12-03,2023-12-07,130703,Recovered
+338,67,Female,Covid-19,City Hospital,2023-12-04,2023-12-08,61549,Recovered
+339,18,Female,Cancer,Medicare Center,2023-12-05,2023-12-09,170575,Recovered
+340,25,Male,Cancer,Apollo,2023-12-06,2023-12-10,78794,Recovered
+341,54,Male,Asthma,Apollo,2023-12-07,2023-12-11,50113,Recovered
+342,58,Female,Asthma,City Hospital,2023-12-08,2023-12-12,79069,Recovered
+343,67,Female,Diabetes,City Hospital,2023-12-09,2023-12-13,141321,Recovered
+344,46,Male,Heart Disease,Apollo,2023-12-10,2023-12-14,155273,Recovered
+345,24,Female,Asthma,Medicare Center,2023-12-11,2023-12-15,130541,Recovered
+346,32,Female,Cancer,City Hospital,2023-12-12,2023-12-16,194648,Referred
+347,47,Male,Covid-19,City Hospital,2023-12-13,2023-12-17,14686,Referred
+348,86,Female,Cancer,City Hospital,2023-12-14,2023-12-18,58363,Referred
+349,23,Female,Heart Disease,Apollo,2023-12-15,2023-12-19,102543,Recovered
+350,66,Male,Cancer,Apollo,2023-12-16,2023-12-20,136733,Recovered
+351,27,Male,Diabetes,Apollo,2023-12-17,2023-12-21,180915,Death
+352,2,Male,Heart Disease,Apollo,2023-12-18,2023-12-22,100673,Recovered
+353,17,Female,Covid-19,Medicare Center,2023-12-19,2023-12-23,197035,Recovered
+354,33,Male,Diabetes,Medicare Center,2023-12-20,2023-12-24,47828,Recovered
+355,9,Male,Heart Disease,Apollo,2023-12-21,2023-12-25,53604,Recovered
+356,43,Male,Covid-19,Medicare Center,2023-12-22,2023-12-26,15526,Referred
+357,48,Male,Diabetes,City Hospital,2023-12-23,2023-12-27,73910,Recovered
+358,39,Male,Diabetes,City Hospital,2023-12-24,2023-12-28,30592,Recovered
+359,42,Male,Heart Disease,City Hospital,2023-12-25,2023-12-29,33982,Recovered
+360,26,Female,Asthma,Apollo,2023-12-26,2023-12-30,5207,Recovered
+361,50,Female,Diabetes,City Hospital,2023-12-27,2023-12-31,93733,Recovered
+362,25,Male,Diabetes,Medicare Center,2023-12-28,2024-01-01,129982,Recovered
+363,24,Male,Covid-19,Apollo,2023-12-29,2024-01-02,73619,Recovered
+364,13,Male,Cancer,Medicare Center,2023-12-30,2024-01-03,165400,Death
+365,60,Female,Heart Disease,City Hospital,2023-12-31,2024-01-04,51479,Recovered
+366,7,Female,Heart Disease,City Hospital,2024-01-01,2024-01-05,156175,Recovered
+367,57,Female,Asthma,City Hospital,2024-01-02,2024-01-06,175963,Recovered
+368,36,Female,Asthma,Apollo,2024-01-03,2024-01-07,146826,Recovered
+369,45,Female,Heart Disease,Medicare Center,2024-01-04,2024-01-08,86437,Recovered
+370,20,Female,Asthma,Apollo,2024-01-05,2024-01-09,103540,Recovered
+371,65,Female,Covid-19,Apollo,2024-01-06,2024-01-10,77982,Recovered
+372,8,Female,Heart Disease,City Hospital,2024-01-07,2024-01-11,107747,Recovered
+373,16,Female,Asthma,Apollo,2024-01-08,2024-01-12,191994,Referred
+374,14,Male,Heart Disease,Apollo,2024-01-09,2024-01-13,53231,Recovered
+375,76,Male,Cancer,City Hospital,2024-01-10,2024-01-14,34301,Recovered
+376,87,Male,Diabetes,Apollo,2024-01-11,2024-01-15,198783,Recovered
+377,15,Male,Heart Disease,City Hospital,2024-01-12,2024-01-16,177395,Recovered
+378,66,Female,Diabetes,City Hospital,2024-01-13,2024-01-17,23752,Recovered
+379,32,Female,Asthma,City Hospital,2024-01-14,2024-01-18,103452,Referred
+380,87,Male,Diabetes,City Hospital,2024-01-15,2024-01-19,149467,Referred
+381,63,Female,Heart Disease,Apollo,2024-01-16,2024-01-20,126237,Recovered
+382,86,Male,Cancer,City Hospital,2024-01-17,2024-01-21,61273,Death
+383,51,Female,Asthma,City Hospital,2024-01-18,2024-01-22,96878,Recovered
+384,25,Male,Heart Disease,Apollo,2024-01-19,2024-01-23,9895,Recovered
+385,58,Female,Asthma,Apollo,2024-01-20,2024-01-24,124968,Recovered
+386,63,Female,Covid-19,Medicare Center,2024-01-21,2024-01-25,120700,Referred
+387,62,Male,Diabetes,Apollo,2024-01-22,2024-01-26,81559,Recovered
+388,22,Female,Covid-19,Apollo,2024-01-23,2024-01-27,15699,Recovered
+389,58,Male,Heart Disease,Medicare Center,2024-01-24,2024-01-28,14715,Recovered
+390,58,Male,Cancer,Apollo,2024-01-25,2024-01-29,24169,Recovered
+391,86,Male,Asthma,Apollo,2024-01-26,2024-01-30,123413,Recovered
+392,49,Male,Diabetes,Apollo,2024-01-27,2024-01-31,152235,Referred
+393,52,Female,Asthma,Apollo,2024-01-28,2024-02-01,124264,Recovered
+394,42,Female,Heart Disease,Medicare Center,2024-01-29,2024-02-02,10782,Recovered
+395,70,Female,Asthma,Apollo,2024-01-30,2024-02-03,129481,Death
+396,15,Male,Diabetes,Apollo,2024-01-31,2024-02-04,40585,Recovered
+397,54,Female,Heart Disease,Medicare Center,2024-02-01,2024-02-05,35682,Death
+398,60,Male,Asthma,City Hospital,2024-02-02,2024-02-06,183936,Recovered
+399,8,Female,Cancer,Medicare Center,2024-02-03,2024-02-07,134992,Recovered
+400,53,Female,Heart Disease,City Hospital,2024-02-04,2024-02-08,89416,Recovered
+401,60,Female,Heart Disease,Medicare Center,2024-02-05,2024-02-09,191186,Referred
+402,5,Male,Cancer,Medicare Center,2024-02-06,2024-02-10,132810,Recovered
+403,68,Female,Covid-19,Apollo,2024-02-07,2024-02-11,43067,Recovered
+404,6,Female,Diabetes,City Hospital,2024-02-08,2024-02-12,178757,Recovered
+405,47,Male,Covid-19,Apollo,2024-02-09,2024-02-13,23073,Recovered
+406,55,Female,Asthma,City Hospital,2024-02-10,2024-02-14,41035,Recovered
+407,40,Male,Cancer,Medicare Center,2024-02-11,2024-02-15,95373,Recovered
+408,52,Female,Covid-19,Medicare Center,2024-02-12,2024-02-16,88362,Referred
+409,16,Male,Heart Disease,City Hospital,2024-02-13,2024-02-17,95517,Recovered
+410,13,Male,Asthma,Apollo,2024-02-14,2024-02-18,70450,Recovered
+411,30,Female,Asthma,Apollo,2024-02-15,2024-02-19,15382,Recovered
+412,19,Male,Covid-19,Apollo,2024-02-16,2024-02-20,140509,Referred
+413,17,Male,Covid-19,Apollo,2024-02-17,2024-02-21,66929,Recovered
+414,63,Male,Cancer,Medicare Center,2024-02-18,2024-02-22,103864,Recovered
+415,19,Male,Diabetes,Medicare Center,2024-02-19,2024-02-23,148401,Recovered
+416,58,Male,Covid-19,Medicare Center,2024-02-20,2024-02-24,30169,Recovered
+417,55,Male,Covid-19,Medicare Center,2024-02-21,2024-02-25,92468,Recovered
+418,62,Female,Heart Disease,Medicare Center,2024-02-22,2024-02-26,39594,Recovered
+419,23,Male,Asthma,Apollo,2024-02-23,2024-02-27,196703,Recovered
+420,9,Male,Diabetes,Apollo,2024-02-24,2024-02-28,50033,Recovered
+421,12,Female,Heart Disease,Apollo,2024-02-25,2024-02-29,68133,Recovered
+422,1,Female,Cancer,Apollo,2024-02-26,2024-03-01,78861,Recovered
+423,58,Female,Cancer,Medicare Center,2024-02-27,2024-03-02,188362,Recovered
+424,1,Female,Covid-19,Medicare Center,2024-02-28,2024-03-03,36750,Recovered
+425,34,Female,Covid-19,Medicare Center,2024-02-29,2024-03-04,45461,Recovered
+426,48,Female,Cancer,City Hospital,2024-03-01,2024-03-05,83222,Recovered
+427,89,Female,Covid-19,Apollo,2024-03-02,2024-03-06,117020,Recovered
+428,1,Male,Diabetes,Apollo,2024-03-03,2024-03-07,29226,Recovered
+429,16,Male,Covid-19,Medicare Center,2024-03-04,2024-03-08,11721,Recovered
+430,61,Female,Asthma,Apollo,2024-03-05,2024-03-09,192226,Recovered
+431,64,Male,Covid-19,Apollo,2024-03-06,2024-03-10,25609,Recovered
+432,63,Male,Heart Disease,Medicare Center,2024-03-07,2024-03-11,188202,Recovered
+433,69,Male,Diabetes,City Hospital,2024-03-08,2024-03-12,135513,Recovered
+434,22,Female,Heart Disease,City Hospital,2024-03-09,2024-03-13,109211,Recovered
+435,67,Female,Heart Disease,City Hospital,2024-03-10,2024-03-14,191321,Recovered
+436,76,Male,Asthma,Medicare Center,2024-03-11,2024-03-15,184967,Recovered
+437,26,Female,Diabetes,Apollo,2024-03-12,2024-03-16,141728,Recovered
+438,16,Male,Diabetes,Medicare Center,2024-03-13,2024-03-17,129865,Death
+439,51,Male,Diabetes,Medicare Center,2024-03-14,2024-03-18,79520,Recovered
+440,86,Male,Diabetes,Apollo,2024-03-15,2024-03-19,199812,Recovered
+441,57,Male,Diabetes,City Hospital,2024-03-16,2024-03-20,69309,Recovered
+442,29,Female,Asthma,City Hospital,2024-03-17,2024-03-21,34984,Recovered
+443,78,Female,Covid-19,Medicare Center,2024-03-18,2024-03-22,123947,Recovered
+444,69,Female,Heart Disease,City Hospital,2024-03-19,2024-03-23,10901,Recovered
+445,47,Male,Diabetes,Medicare Center,2024-03-20,2024-03-24,167624,Recovered
+446,62,Female,Covid-19,Medicare Center,2024-03-21,2024-03-25,36055,Referred
+447,69,Male,Covid-19,Apollo,2024-03-22,2024-03-26,173757,Recovered
+448,76,Female,Heart Disease,Apollo,2024-03-23,2024-03-27,150788,Recovered
+449,16,Male,Asthma,Apollo,2024-03-24,2024-03-28,119099,Recovered
+450,48,Male,Cancer,Medicare Center,2024-03-25,2024-03-29,16138,Recovered
+451,85,Male,Cancer,Apollo,2024-03-26,2024-03-30,171370,Recovered
+452,39,Female,Covid-19,City Hospital,2024-03-27,2024-03-31,187184,Recovered
+453,33,Female,Heart Disease,City Hospital,2024-03-28,2024-04-01,28429,Recovered
+454,23,Female,Cancer,Medicare Center,2024-03-29,2024-04-02,55200,Recovered
+455,10,Female,Covid-19,Medicare Center,2024-03-30,2024-04-03,184316,Recovered
+456,69,Male,Asthma,Apollo,2024-03-31,2024-04-04,106268,Recovered
+457,34,Female,Cancer,Medicare Center,2024-04-01,2024-04-05,22347,Recovered
+458,52,Female,Covid-19,Medicare Center,2024-04-02,2024-04-06,152992,Referred
+459,10,Male,Covid-19,City Hospital,2024-04-03,2024-04-07,36822,Referred
+460,19,Male,Diabetes,City Hospital,2024-04-04,2024-04-08,182731,Recovered
+461,58,Male,Asthma,Apollo,2024-04-05,2024-04-09,45108,Recovered
+462,1,Female,Diabetes,Medicare Center,2024-04-06,2024-04-10,133955,Recovered
+463,69,Male,Heart Disease,Medicare Center,2024-04-07,2024-04-11,12967,Recovered
+464,4,Male,Diabetes,City Hospital,2024-04-08,2024-04-12,115719,Referred
+465,16,Male,Diabetes,Medicare Center,2024-04-09,2024-04-13,16871,Recovered
+466,24,Female,Cancer,City Hospital,2024-04-10,2024-04-14,169685,Recovered
+467,80,Male,Covid-19,Apollo,2024-04-11,2024-04-15,33179,Recovered
+468,2,Female,Asthma,City Hospital,2024-04-12,2024-04-16,188260,Recovered
+469,32,Female,Diabetes,Medicare Center,2024-04-13,2024-04-17,60099,Recovered
+470,84,Male,Asthma,Apollo,2024-04-14,2024-04-18,40262,Referred
+471,24,Male,Diabetes,City Hospital,2024-04-15,2024-04-19,83213,Recovered
+472,12,Female,Heart Disease,City Hospital,2024-04-16,2024-04-20,122407,Recovered
+473,50,Male,Diabetes,Apollo,2024-04-17,2024-04-21,154340,Death
+474,35,Male,Cancer,Apollo,2024-04-18,2024-04-22,91269,Recovered
+475,33,Female,Covid-19,City Hospital,2024-04-19,2024-04-23,65545,Recovered
+476,33,Female,Heart Disease,Medicare Center,2024-04-20,2024-04-24,44922,Recovered
+477,61,Male,Diabetes,City Hospital,2024-04-21,2024-04-25,47913,Recovered
+478,51,Female,Asthma,Apollo,2024-04-22,2024-04-26,102033,Referred
+479,43,Male,Heart Disease,City Hospital,2024-04-23,2024-04-27,109792,Recovered
+480,12,Male,Heart Disease,Apollo,2024-04-24,2024-04-28,191749,Referred
+481,67,Male,Diabetes,Apollo,2024-04-25,2024-04-29,185913,Recovered
+482,65,Female,Heart Disease,Medicare Center,2024-04-26,2024-04-30,182404,Referred
+483,33,Male,Asthma,Apollo,2024-04-27,2024-05-01,124863,Recovered
+484,40,Male,Heart Disease,Apollo,2024-04-28,2024-05-02,161104,Recovered
+485,74,Male,Asthma,Medicare Center,2024-04-29,2024-05-03,173918,Recovered
+486,43,Female,Diabetes,Apollo,2024-04-30,2024-05-04,195546,Death
+487,44,Female,Covid-19,Medicare Center,2024-05-01,2024-05-05,49936,Recovered
+488,29,Female,Heart Disease,Medicare Center,2024-05-02,2024-05-06,165866,Recovered
+489,13,Female,Covid-19,Apollo,2024-05-03,2024-05-07,197660,Recovered
+490,12,Female,Asthma,Apollo,2024-05-04,2024-05-08,186403,Recovered
+491,46,Male,Heart Disease,City Hospital,2024-05-05,2024-05-09,33141,Referred
+492,2,Female,Cancer,Medicare Center,2024-05-06,2024-05-10,145146,Recovered
+493,35,Female,Covid-19,City Hospital,2024-05-07,2024-05-11,142478,Recovered
+494,87,Female,Heart Disease,Apollo,2024-05-08,2024-05-12,102359,Recovered
+495,81,Male,Covid-19,City Hospital,2024-05-09,2024-05-13,128279,Recovered
+496,8,Female,Heart Disease,Medicare Center,2024-05-10,2024-05-14,159363,Recovered
+497,26,Female,Diabetes,City Hospital,2024-05-11,2024-05-15,46568,Recovered
+498,74,Male,Covid-19,Medicare Center,2024-05-12,2024-05-16,102539,Recovered
+499,34,Female,Cancer,Apollo,2024-05-13,2024-05-17,51851,Recovered
+500,7,Male,Cancer,Apollo,2024-05-14,2024-05-18,59823,Recovered
