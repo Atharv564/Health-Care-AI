@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Report History</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body style="background:#020617; color:#e5e7eb;">
+
+<div class="container my-5">
+
+    <h2 class="mb-4 text-center">📂 Your Report History</h2>
+
+    <div class="text-center mb-4">
+        <a href="/" class="btn btn-outline-light btn-sm">⬅ Upload New</a>
+        <a href="/logout/" class="btn btn-outline-danger btn-sm">Logout</a>
+    </div>
+
+    {% if reports %}
+    <div class="card p-3 bg-dark border-0 shadow-lg">
+        <table class="table table-dark table-hover align-middle">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Total Patients</th>
+                    <th>Avg Cost</th>
+                    <th>Download</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for r in reports %}
+                <tr>
+                    <td>{{ r.id }}</td>
+                    <td>{{ r.created_at|date:"Y-m-d H:i" }}</td>
+                    <td>{{ r.summary.total_patients }}</td>
+                    <td>₹{{ r.summary.avg_cost|floatformat:0 }}</td>
+                    <td>
+                        <a href="/download/{{ r.id }}/" class="btn btn-sm btn-info">
+                            PDF
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+
+    {% else %}
+    <div class="text-center mt-5">
+        <h5>No reports yet</h5>
+        <p class="text-muted">Upload a CSV to generate analytics</p>
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
