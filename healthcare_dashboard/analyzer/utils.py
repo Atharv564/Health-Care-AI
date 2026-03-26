@@ -6,13 +6,15 @@ from google import genai
 def process_healthcare_data(csv_path):
     df = pd.read_csv(csv_path)
 
+    # ---------------- CLEANING ----------------
     df.columns = df.columns.str.strip().str.lower()
 
     df['admission_date'] = pd.to_datetime(df['admission_date'], errors='coerce')
     df['discharge_date'] = pd.to_datetime(df['discharge_date'], errors='coerce')
-    df = df.dropna(subset=['admission_date', 'discharge_date'])
 
+    df = df.dropna(subset=['admission_date', 'discharge_date'])
     df = df[df['discharge_date'] >= df['admission_date']]
+
     df['stay_days'] = (df['discharge_date'] - df['admission_date']).dt.days
     df = df[df['stay_days'] > 0]
 
@@ -21,6 +23,11 @@ def process_healthcare_data(csv_path):
 
     df['cost_per_day'] = df['treatment_cost'] / df['stay_days']
 
+    # ---------------- DEBUG (VERY IMPORTANT) ----------------
+    print("Unique stay days:", df['stay_days'].nunique())
+    print("Stay distribution:\n", df['stay_days'].value_counts().head())
+
+    # ---------------- BASIC ANALYTICS ----------------
     top_diseases = df['disease'].value_counts().head(5)
 
     severity = (
@@ -36,10 +43,41 @@ def process_healthcare_data(csv_path):
         .sort_values()
     )
 
+    # ---------------- SUMMARY ----------------
     summary = {
         "total_patients": int(len(df)),
         "avg_stay": round(df['stay_days'].mean(), 2),
         "avg_cost": round(df['treatment_cost'].mean(), 2),
+    }
+
+    # ---------------- CHART DATA ----------------
+
+    # RAW scatter data
+    stay_days = df['stay_days'].tolist()
+    costs = df['treatment_cost'].tolist()
+
+    # AGGREGATED (better visualization)
+    grouped = (
+        df.groupby('stay_days')['treatment_cost']
+        .mean()
+        .reset_index()
+    )
+
+    avg_stay_days = grouped['stay_days'].tolist()
+    avg_costs = grouped['treatment_cost'].tolist()
+
+    chart_data = {
+        "disease_labels": list(top_diseases.keys()),
+        "disease_counts": list(top_diseases.values),
+
+        "stay_days": stay_days,
+        "costs": costs,
+
+        "avg_stay_days": avg_stay_days,
+        "avg_costs": avg_costs,
+
+        "hospital_labels": hospital_cost.index.tolist(),
+        "hospital_costs": hospital_cost.values.tolist()
     }
 
     return {
@@ -49,13 +87,14 @@ def process_healthcare_data(csv_path):
         "severity": severity.to_dict(),
         "best_hospitals": hospital_cost.head(3).to_dict(),
         "worst_hospitals": hospital_cost.tail(3).to_dict(),
+        "chart_data": chart_data
     }
 
 
+# ---------------- INSIGHTS ----------------
 def generate_insights(df):
     insights = []
 
-    # ---------- Disease concentration ----------
     if df['disease'].nunique() > 0:
         disease_share = df['disease'].value_counts(normalize=True).iloc[0] * 100
         if disease_share > 30:
@@ -63,7 +102,6 @@ def generate_insights(df):
                 f"One disease accounts for {disease_share:.1f}% of total admissions."
             )
 
-    # ---------- SAFE CORRELATION ----------
     stay_std = df['stay_days'].std()
     cost_std = df['treatment_cost'].std()
 
@@ -75,52 +113,45 @@ def generate_insights(df):
             )
     else:
         insights.append(
-            "Not enough variation in stay duration or treatment cost to assess correlation."
+            "Not enough variation in stay duration or cost."
         )
 
-    # ---------- Hospital efficiency gap ----------
     cost_per_day = df.groupby('hospital_name')['cost_per_day'].mean()
+
     if len(cost_per_day) > 1:
         gap = cost_per_day.max() - cost_per_day.min()
         if gap > 500:
             insights.append(
-                f"There is a large hospital efficiency gap of ₹{gap:.0f} per day."
+                f"Hospital efficiency gap is ₹{gap:.0f}/day."
             )
 
     return insights
 
 
+# ---------------- AI ----------------
 def generate_ai_suggestions(summary, top_diseases, best_hospitals, worst_hospitals):
     api_key = os.getenv("GOOGLE_API_KEY")
 
     if not api_key:
-        return ["GOOGLE_API_KEY missing. AI disabled."]
+        return ["GOOGLE_API_KEY missing"]
 
     try:
         client = genai.Client(api_key=api_key)
 
         prompt = f"""
-You are a healthcare analytics consultant.
-
-Data Summary:
+Healthcare analytics summary:
 {summary}
 
-Most common diseases:
+Diseases:
 {top_diseases}
 
-Most cost-efficient hospitals:
+Best hospitals:
 {best_hospitals}
 
-Least cost-efficient hospitals:
+Worst hospitals:
 {worst_hospitals}
 
-Provide **exactly 4 concise suggestions** (1 line each) covering:
-1. Cost optimization in rupees
-2. Disease prevention
-3. Hospital efficiency
-4. Actionable recommendation
-
-Make each line short and to the point.
+Give 4 short actionable suggestions.
 """
 
         response = client.models.generate_content(
@@ -128,11 +159,7 @@ Make each line short and to the point.
             contents=prompt
         )
 
-        return [
-            line.strip()
-            for line in response.text.split("\n")
-            if line.strip()
-        ]
+        return [line.strip() for line in response.text.split("\n") if line.strip()]
 
     except Exception as e:
-        return [f"AI failed: {str(e)}"]
+        return [f"AI error: {str(e)}"]

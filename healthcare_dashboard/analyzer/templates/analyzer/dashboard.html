@@ -231,38 +231,60 @@ canvas {
         </div>
     </div>
 
-    <!-- Hospital Efficiency -->
-    <div class="row g-4 mt-1">
-        <div class="col-md-6">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="fw-bold text-success">Most Cost Efficient Hospitals</h5>
-                    <ul class="list-group list-group-flush">
-                        {% for hospital, values in best_hospitals.cost_per_day.items %}
-                        <li class="list-group-item">
-                            {{ hospital }} – ₹{{ values|floatformat:2 }}/day
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
+<!-- Hospital Efficiency -->
+<div class="row g-4 mt-1">
 
-        <div class="col-md-6">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="fw-bold text-danger">Least Cost Efficient Hospitals</h5>
-                    <ul class="list-group list-group-flush">
-                        {% for hospital, values in worst_hospitals.cost_per_day.items %}
-                        <li class="list-group-item">
-                            {{ hospital }} – ₹{{ values|floatformat:2 }}/day
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
+    <!-- MOST EFFICIENT -->
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="fw-bold text-success">Most Cost Efficient Hospitals</h5>
+
+                <ul class="list-group list-group-flush">
+                    {% for hospital, value in best_hospitals.items %}
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>{{ hospital }}</span>
+                        <span class="badge bg-success">
+                            ₹{{ value|floatformat:2 }}/day
+                        </span>
+                    </li>
+                    {% empty %}
+                    <li class="list-group-item text-muted">
+                        No data available
+                    </li>
+                    {% endfor %}
+                </ul>
+
             </div>
         </div>
     </div>
+
+    <!-- LEAST EFFICIENT -->
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="fw-bold text-danger">Least Cost Efficient Hospitals</h5>
+
+                <ul class="list-group list-group-flush">
+                    {% for hospital, value in worst_hospitals.items %}
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>{{ hospital }}</span>
+                        <span class="badge bg-danger">
+                            ₹{{ value|floatformat:2 }}/day
+                        </span>
+                    </li>
+                    {% empty %}
+                    <li class="list-group-item text-muted">
+                        No data available
+                    </li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+</div>
 
     <div class="row g-4 mt-4">
 
@@ -354,20 +376,25 @@ canvas {
 
     // Stay vs Cost
     new Chart(document.getElementById('stayCostChart'), {
-        type: 'scatter',
+        type: 'bar',
         data: {
+            labels: chartData.costs.map((_, i) => `Patient ${i+1}`),
             datasets: [{
-                label: 'Patients',
-                data: chartData.stay_days.map((v, i) => ({
-                    x: v,
-                    y: chartData.costs[i]
-                }))
+                label: 'Treatment Cost (₹)',
+                data: chartData.costs
             }]
         },
         options: {
+            plugins: {
+                legend: { display: false }
+            },
             scales: {
-                x: { title: { display: true, text: 'Stay Days' } },
-                y: { title: { display: true, text: 'Cost (₹)' } }
+                x: {
+                    display: false  // hide messy labels
+                },
+                y: {
+                    title: { display: true, text: 'Cost (₹)' }
+                }
             }
         }
     });
