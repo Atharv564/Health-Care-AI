@@ -90,6 +90,19 @@ Built to simulate a **real-world healthcare analytics pipeline** with authentica
 
 ---
 
+### 🔑 Admin Capabilities
+
+- **View All Users**  
+  Admins can see a complete list of registered users with basic info like username, email, and signup date.
+
+- **Access User Reports**  
+  Admins can download all reports uploaded by users, including metrics, charts, and AI insights.
+
+- **Track User Activity**  
+  Admins can monitor last login, number of uploaded datasets, and report history for each user.
+
+
+
 ## 🛠️ Tech Stack
 
 | Layer | Technology |
