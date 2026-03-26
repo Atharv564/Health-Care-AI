@@ -115,7 +115,7 @@ Least cost-efficient hospitals:
 {worst_hospitals}
 
 Provide **exactly 4 concise suggestions** (1 line each) covering:
-1. Cost optimization
+1. Cost optimization in rupees
 2. Disease prevention
 3. Hospital efficiency
 4. Actionable recommendation
