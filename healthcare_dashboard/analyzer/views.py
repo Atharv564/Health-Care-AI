@@ -14,6 +14,7 @@ from django.contrib.auth.models import User
 from django.shortcuts import redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import user_passes_test
 # genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # Singup
@@ -64,11 +65,12 @@ def upload_csv(request):
         if form.is_valid():
             csv_file = request.FILES["csv_file"]
 
+            # Save uploaded file
             fs = FileSystemStorage(location="media/uploads")
             filename = fs.save(csv_file.name, csv_file)
             file_path = fs.path(filename)
 
-            # PROCESS DATA
+            # ---------------- PROCESS DATA ----------------
             analytics = process_healthcare_data(file_path)
 
             if "error" in analytics:
@@ -79,8 +81,8 @@ def upload_csv(request):
 
             df = analytics["df"]
 
+            # ---------------- GENERATE INSIGHTS ----------------
             insights = generate_insights(df)
-
             ai_suggestions = generate_ai_suggestions(
                 analytics["summary"],
                 analytics["top_diseases"],
@@ -88,20 +90,20 @@ def upload_csv(request):
                 analytics["worst_hospitals"],
             )
 
-            # ✅ SAVE TO DATABASE (CORE FIX)
+            # ---------------- SAVE TO DATABASE ----------------
             report = HealthReport.objects.create(
                 user=request.user,
-                file=filename,
+                file=csv_file,  # ✅ Use the uploaded file object
                 summary=analytics["summary"],
                 top_diseases=analytics["top_diseases"],
                 severity=analytics["severity"],
                 best_hospitals=analytics["best_hospitals"],
                 worst_hospitals=analytics["worst_hospitals"],
                 insights=insights,
-                ai_suggestions=ai_suggestions,
+                ai_suggestions=ai_suggestions
             )
 
-            # CHART DATA
+            # ---------------- PREPARE CHART DATA ----------------
             chart_data = {
                 "disease_labels": list(analytics["top_diseases"].keys()),
                 "disease_counts": list(analytics["top_diseases"].values()),
@@ -112,7 +114,7 @@ def upload_csv(request):
             }
 
             context = {
-                "report": report,
+                "report": report,  # ✅ assigned correctly
                 "summary": analytics["summary"],
                 "top_diseases": analytics["top_diseases"],
                 "severity": analytics["severity"],
@@ -137,12 +139,22 @@ def history_view(request):
     return render(request, "analyzer/history.html", {"reports": reports})
 
 # download pdf
+from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
+from io import BytesIO
+from xhtml2pdf import pisa
+from django.template.loader import get_template
+from .models import HealthReport
+
 @login_required
 def download_dashboard_pdf(request, report_id):
     try:
-        report = HealthReport.objects.get(id=report_id, user=request.user)
+        report = HealthReport.objects.get(id=report_id)
+        # Allow download if owner or admin
+        if report.user != request.user and not request.user.is_superuser:
+            return HttpResponse("Unauthorized", status=403)
     except HealthReport.DoesNotExist:
-        return HttpResponse("Unauthorized", status=403)
+        return HttpResponse("Report not found", status=404)
 
     context = {
         "summary": report.summary,
@@ -164,5 +176,23 @@ def download_dashboard_pdf(request, report_id):
         return HttpResponse("Error generating PDF", status=500)
 
     response = HttpResponse(result.getvalue(), content_type="application/pdf")
-    response["Content-Disposition"] = 'attachment; filename="Report.pdf"'
+    response["Content-Disposition"] = f'attachment; filename="Report_{report.id}.pdf"'
     return response
+
+# admin
+def is_admin(user):
+    return user.is_staff
+
+
+@user_passes_test(is_admin)
+def admin_dashboard(request):
+    users = User.objects.all().prefetch_related('reports')
+
+    total_users = users.count()
+    total_reports = sum(user.reports.count() for user in users)
+
+    return render(request, "admin_dashboard.html", {
+        "users": users,
+        "total_users": total_users,
+        "total_reports": total_reports
+    })
