@@ -1,45 +1,92 @@
 # 🏥 Healthcare Analytics Dashboard with AI Insights
 
-A Django-based data analytics dashboard that processes healthcare CSV data, generates statistical insights, visualizes trends using charts, and provides AI-powered recommendations using Google Gemini.
+A full-stack Django application that transforms raw healthcare CSV data into actionable insights using data analytics, visualization, and AI-driven recommendations.
 
-This project is designed to demonstrate **real-world data cleaning, analysis, visualization, and AI integration** — not toy examples.
+Built to simulate a **real-world healthcare analytics pipeline** with authentication, persistent storage, and report generation.
 
 ---
 
-## 🚀 Features
+## 🚀 Key Highlights
 
-### 📂 Data Processing
-- Upload healthcare CSV files
-- Automatic column standardization
-- Data cleaning & validation
-- Invalid rows filtered safely (dates, costs, stay duration)
+- 🔐 **User Authentication System** (Signup, Login, Logout)  
+- 📊 **End-to-End Data Pipeline** (Upload → Clean → Analyze → Visualize)  
+- 🧠 **AI-Powered Insights** using Google Gemini  
+- 🗂️ **Persistent History Tracking** (Database-backed, per user)  
+- 📄 **PDF Report Generation** for analytics export  
+- ⚡ Designed for **real-world messy datasets**, not ideal inputs  
 
-### 📊 Analytics Generated
-- Total patients count
-- Average hospital stay
-- Average treatment cost
-- Top 5 most common diseases
-- Diseases with longest average hospital stay (severity)
-- Most cost-efficient hospitals
-- Least cost-efficient hospitals
+---
 
-### 📈 Visualizations
-- Disease distribution (bar chart)
-- Cost vs stay duration (scatter plot)
-- Hospital cost comparison
+## 🧩 Core Features
 
-### 🧠 Rule-Based Insights
-- Disease concentration warnings
-- Cost vs stay correlation detection
-- Hospital efficiency gap analysis
+### 🔐 Authentication & Security
+- Django built-in authentication system  
+- Login-required protected routes  
+- Session-based user isolation  
+- Secure logout flow  
 
-### 🤖 AI-Powered Suggestions (Gemini)
-- Cost optimization strategies
-- Hospital efficiency improvements
-- Disease prevention focus areas
-- Actionable management recommendations
+---
 
-AI gracefully disables itself if API key is missing.
+### 📂 Data Processing Engine
+- CSV upload with validation  
+- Automatic column normalization  
+- Robust data cleaning:
+  - Invalid dates removed  
+  - Negative/zero stay filtered  
+  - Non-numeric costs handled  
+
+- Derived metrics:
+  - `stay_days`  
+  - `cost_per_day`  
+
+---
+
+### 📊 Analytics & Metrics
+- Total patients  
+- Average stay duration  
+- Average treatment cost  
+- Top diseases (frequency-based)  
+- High severity diseases (long stay)  
+- Hospital efficiency ranking (cost/day)  
+
+---
+
+### 📈 Data Visualization
+- Bar chart → Disease distribution  
+- Scatter plot → Stay vs Cost correlation  
+- Bar chart → Hospital efficiency  
+
+---
+
+### 🧠 Intelligent Insights
+
+#### Rule-Based
+- Disease concentration detection  
+- Cost vs stay correlation analysis  
+- Hospital efficiency gap identification  
+
+#### AI-Based (Gemini API)
+- Cost optimization strategies (₹)  
+- Disease prevention insights  
+- Hospital efficiency improvements  
+- Actionable recommendations  
+
+> Gracefully disables if API key is missing.
+
+---
+
+### 🗂️ History Management
+- Each analysis stored in database  
+- Linked to authenticated user  
+- Enables:
+  - Revisit past reports  
+  - Real-world analytics tracking  
+
+---
+
+### 📄 Report Export
+- Download dashboard report as PDF  
+- Includes summary, hospital analysis, insights, and AI suggestions  
 
 ---
 
@@ -47,16 +94,16 @@ AI gracefully disables itself if API key is missing.
 
 | Layer | Technology |
 |------|-----------|
-| Backend | Django 6.x |
-| Data Analysis | Pandas, NumPy |
+| Backend | Django 6 |
+| Data Processing | Pandas |
+| Frontend | Tailwind CSS, Bootstrap |
 | Visualization | Chart.js |
-| AI | Google Gemini API |
-| Frontend | HTML, CSS, Bootstrap |
-| Environment | Python 3.10+ |
+| AI Integration | Google Gemini API |
+| Database | SQLite |
 
 ---
 
-## 📁 Project Structure
+## 🧱 Project Architecture
 
 ```
 healthcare_dashboard/
