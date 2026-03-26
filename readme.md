@@ -113,8 +113,14 @@ healthcare_dashboard/
 │   ├── utils.py          # Data processing & AI logic
 │   ├── forms.py          # CSV upload form
 │   ├── templates/
-│   │   ├── upload.html
-│   │   └── dashboard.html
+|   |    |── analyzer/
+|   |    |    ├── dashboard_report.html
+|   |    |    ├── history.html 
+|   |    |    ├── upload.html
+|   |    |    └── dashboard.html
+|   |    |── auth/
+│   │         ├── upload.html
+│   │         └── dashboard.html
 │
 ├── static/
 │   └── charts.js         # Chart rendering logic
@@ -150,7 +156,7 @@ Date format can be flexible — invalid rows are automatically removed.
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone <repo-url>
+git clone https://github.com/Atharv564/Health-Care-AI.git
 cd healthcare_dashboard
 ```
 
@@ -190,58 +196,56 @@ http://127.0.0.1:8000/
 
 ---
 
-## 🧪 How It Works (Pipeline)
+## 🔄 System Workflow
 
-1. User uploads CSV
-2. Pandas cleans & validates data
-3. Metrics and aggregations computed
-4. Charts rendered on dashboard
-5. Rule-based insights generated
-6. AI suggestions requested from Gemini
-7. Results displayed cleanly
-
+1. User signs up / logs in  
+2. Uploads healthcare dataset  
+3. Data cleaned using Pandas  
+4. Metrics computed  
+5. Charts rendered  
+6. Insights generated (rule-based + AI)  
+7. Results stored in database  
+8. User can:
+   - View dashboard  
+   - Access history  
+   - Download PDF report  
 ---
+## ⚠️ Design Principles
 
-## ⚠️ Important Design Notes
-
-- Rankings are **data-dependent** — no fake insights
-- Small datasets may show overlapping best/worst hospitals
-- AI errors are handled safely
-- No assumptions about perfect data
-
-This project prioritizes **correctness over cosmetic results**.
+- All analytics are **data-driven** — no hardcoded or fake insights  
+- Designed to handle **imperfect real-world datasets**  
+- Safe error handling for AI and data failures  
+- Focused on **correctness, not cosmetic outputs**  
 
 ---
 
 ## 🧠 Known Limitations
 
-- Small datasets reduce insight quality
-- Gemini API model availability may change
-- Charts depend on cleaned data
+- Insight quality depends on dataset size  
+- External AI (Gemini) availability may vary  
+- SQLite is not suitable for production-scale workloads  
 
 ---
 
 ## 📌 Future Enhancements
 
-- PDF report export
-- Database storage (PostgreSQL)
-- User authentication
-- Time-series disease trends
-- Hospital performance scoring
-- Docker deployment
+- PostgreSQL integration with indexing  
+- REST API (Django REST Framework)  
+- Advanced filtering & search in history  
+- Time-series disease trend analysis  
+- Role-based access (admin vs user)  
+- Docker deployment  
 
 ---
 
 ## 👨‍💻 Author
 
 **Atharv**  
-Information Technology Engineer  
-Python • Django • Data Analytics • AI Integration
+IT Engineer | Backend Developer  
+Django • Data Analytics • AI Systems  
 
 ---
 
 ## 📜 License
 
-This project is for educational and demonstration purposes.
-
-
+For educational and demonstration purposes.
